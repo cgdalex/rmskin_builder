@@ -34,12 +34,7 @@ Install dependencies:
 ```bash
 pip install Pillow
 ```
-
 ---
-1️⃣ Automatic Mode (GIF input)
-```bash
-python builder.py --gif *path/to/animation.gif* --name MySkin
-```
 
 ##🛠️ Project Structure
 
@@ -59,7 +54,7 @@ rmskin-builder/
 ## 🚀 Getting Started: Method #1
 1. Clone the repository:
    ```bash
-   git clone 
+   git clone [text](https://github.com/cgdalex/rmskin_builder.git)
    ```
 2. Install dependencies:
    ```bash
