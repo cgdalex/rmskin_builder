@@ -1,0 +1,7 @@
+This folder serves as container for the .gif files you want to convert to Rainmeter skins.
+Do's:
+    - Include/insert files that have the extension '.gif'.
+    - Keep your gif files here, they will not interfere when running the script again.
+Dont's:
+    - Insert '.png' files in this folder/directory.
+        - Won't break the script, but will display warnings in terminal.
