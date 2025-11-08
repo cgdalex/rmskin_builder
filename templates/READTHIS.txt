@@ -1,0 +1,4 @@
+This folder will contain all the necessary files to create a RainMeter skin from a .gif file.
+Each skin folder will contain:
+    - A folder named "@Resources" that contains all the frames of the .gif file as .png files.
+    - An .ini file that contains the necessary code for RainMeter to display the .gif as a skin.
