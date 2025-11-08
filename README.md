@@ -39,17 +39,52 @@ pip install Pillow
 1️⃣ Automatic Mode (GIF input)
 ```bash
 python builder.py --gif *path/to/animation.gif* --name MySkin
----
+```
 
 ##🛠️ Project Structure
 
 rmskin-builder/
-├── builder.py
+├── rmskin_builder.py
 ├── utils/
 │   └── gif_tools.py
 ├── templates/
-│   └── skin.ini.template
+│   └── READTHIS.txt
+├── gifs/
+│   └── demo.gif
 ├── output/
 ├── examples/
 │   └── demo.gif
 └── README.md
+
+## 🚀 Getting Started: Method #1
+1. Clone the repository:
+   ```bash
+   git clone 
+   ```
+2. Install dependencies:
+   ```bash
+    pip install -r requirements.txt
+    ```
+3. Place your `.gif` files in the `gifs/` directory.
+4. Run the script:
+   ```bash
+    python rmskin_builder.py
+   ```
+
+## 🚀 Getting Started: Method #2 - Using the script.bat (Windows)
+Easier way to run the script since the project is mainly built for Windows users.
+* Make sure you have Python installed and added to your system PATH.*
+* Either way, the script creates the necessary virtual environment and installs dependencies automatically.*
+
+- Run the `script.bat` file located in the root directory:
+```bash
+    ./script.bat
+```
+
+Both methods will:
+- Process all `.gif` files in the `gifs/` directory.
+- Generate corresponding Rainmeter skin folders in the `output/` directory.
+
+---## 📄 License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
