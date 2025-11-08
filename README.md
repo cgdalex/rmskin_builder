@@ -33,7 +33,7 @@ Perfect for customizing your desktop with animated visuals!
 Install dependencies:
 ```bash
 pip install Pillow
-
+```
 
 ---
 1️⃣ Automatic Mode (GIF input)
@@ -41,7 +41,7 @@ pip install Pillow
 python builder.py --gif *path/to/animation.gif* --name MySkin
 ---
 
-```🛠️ Project Structure
+##🛠️ Project Structure
 
 rmskin-builder/
 ├── builder.py
