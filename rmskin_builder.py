@@ -1,6 +1,8 @@
 from utils.gif_tools import extract_frames
 from pathlib import Path
+import shutil
 import os
+import subprocess
 
 #################################################
 # RM Skin Folder Builder--
@@ -64,6 +66,22 @@ for file in gifs_directory:
             f.writelines(txt_lines)
         print(f"Successfully created RainMeter skin folder in /{skin_path}\n")
         
+        
+        
+        # Zip the Rainmeter skin folder into a zip and use the
+        #   zip2rmskin.exe tool to convert into a proper .rmskin
+        #   folder.
+        #
+        # Crazy that I just cant rename the zip file to .rmskin
+        
+        # Create the zip archive
+        # Arguments: base_name (output path), format, root_dir (input path)
+        
+        shutil.make_archive(f"{skin_path}", 'zip', f'{skin_path}')
+        print(f"Successfully converted {skin_path} to {skin_path}.zip")
+        
+        subprocess.run([f'.\\utils\\zip2rmskin\\zip2rmskin.exe', f'.\\{skin_path}.zip'])
+        shutil.move(f'.\{skin_path}.zip', f'.\\skins\\{gif_without_extension}.rmskin')
     else:
         print(f"{file} is not a .gif file. Skipping...\n")
         continue

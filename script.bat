@@ -23,4 +23,7 @@ if not exist venv (
 echo Starting RMSkin builder script...
 python rmskin_builder.py
 echo RMSkin build process complete.
+
+echo 
+
 echo Please check the templates directory for your RMSkin folder.
