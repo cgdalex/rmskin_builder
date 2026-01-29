@@ -36,11 +36,10 @@ rmskin-builder/
 ├── rmskin_builder.py
 ├── utils/
 │   └── gif_tools.py
-├── templates/
+├── output/
 │   └── READTHIS.txt
 ├── gifs/
 │   └── demo.gif
-├── output/
 ├── examples/
 │   └── demo.gif
 └── README.md
