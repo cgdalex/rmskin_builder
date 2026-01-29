@@ -13,8 +13,3 @@ def extract_frames(outputDir, gif_file):
         frame = frame.convert("RGBA")
         framePath = os.path.join(outputDir, f"frame_{i}.png")
         frame.save(framePath, format="PNG")        
-        
-
-
-        
-    
