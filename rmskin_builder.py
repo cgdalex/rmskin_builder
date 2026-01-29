@@ -20,7 +20,7 @@ for file in gifs_directory:
         
         # Get gif file without extension for outputDir parameter
         gif_without_extension = Path(gif_file).stem
-        skin_path = f"templates/{gif_without_extension}"
+        skin_path = f"output/{gif_without_extension}"
         frames_path = f"{skin_path}/@Resources"
 
         if os.path.exists(skin_path):
