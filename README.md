@@ -72,7 +72,3 @@ This method will:
 - Generate corresponding Rainmeter skin folders in the `output/` directory.
 > The script will skip already processed gifs.
 
-
----## 📄 License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
