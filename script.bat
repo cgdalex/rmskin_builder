@@ -2,6 +2,7 @@
 echo Please include .gif files in the ./gifs/ directory for proper RMSkin functionality.
 if not exist gifs (
     echo Warning: ./gifs/ directory not found. Please create it and add .gif files as needed.
+    exit
 )
 
 echo Starting RMSkin build process...
@@ -9,6 +10,7 @@ echo Starting RMSkin build process...
 if not exist venv (
     echo Setting up virtual environment...
     python -m venv venv
+
     echo Virtual environment created.
     echo Activating virtual environment and installing dependencies...
     call venv\Scripts\activate.bat
