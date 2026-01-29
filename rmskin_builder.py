@@ -3,6 +3,7 @@ from pathlib import Path
 import shutil
 import os
 import subprocess
+import sys
 
 #################################################
 # RM Skin Folder Builder--
@@ -13,6 +14,7 @@ import subprocess
 #                       (Necessary for creating png files of .gif file frames)
 #################################################
 gifs_directory = os.listdir("gifs")
+built_any = False
 for file in gifs_directory:
     if file.endswith('.gif'):
         gif_file = "gifs/" + file
@@ -62,6 +64,9 @@ for file in gifs_directory:
         with open(f"{skin_path}/{gif_without_extension}.ini", "w") as f:
             f.writelines(txt_lines)
         print(f"Successfully created RainMeter skin folder in /{skin_path}\n")
+        built_any = True
     else:
         print(f"{file} is not a .gif file. Skipping...\n")
         continue
+
+sys.exit(0 if built_any else 1)
