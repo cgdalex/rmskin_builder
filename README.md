@@ -45,7 +45,7 @@ rmskin-builder/
 │   └── demo.gif
 └── README.md
 ```
-# Getting Started | Windows Guide
+# Windows Guide | Getting Started
 1. Clone the repository:
    ```pwsh
    git clone https://github.com/cgdalex/rmskin_builder.git
