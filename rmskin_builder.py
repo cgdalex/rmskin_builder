@@ -23,16 +23,13 @@ for file in gifs_directory:
         skin_path = f"templates/{gif_without_extension}"
         frames_path = f"{skin_path}/@Resources"
 
-        # Check's to see if folder is already made.
         if os.path.exists(skin_path):
             print(f"ERROR: {skin_path} already exists.")
             print("Please try another gif...\n")
             continue
 
-        # Extracts Frames into specified folder
         extract_frames(frames_path, gif_file)
 
-        # Finds how many frames images there are
         n_frames = 0
         frames = os.listdir(f"{frames_path}")
         for file in frames:
@@ -65,23 +62,6 @@ for file in gifs_directory:
         with open(f"{skin_path}/{gif_without_extension}.ini", "w") as f:
             f.writelines(txt_lines)
         print(f"Successfully created RainMeter skin folder in /{skin_path}\n")
-        
-        
-        
-        # Zip the Rainmeter skin folder into a zip and use the
-        #   zip2rmskin.exe tool to convert into a proper .rmskin
-        #   folder.
-        #
-        # Crazy that I just cant rename the zip file to .rmskin
-        
-        # Create the zip archive
-        # Arguments: base_name (output path), format, root_dir (input path)
-        
-        shutil.make_archive(f"{skin_path}", 'zip', f'{skin_path}')
-        print(f"Successfully converted {skin_path} to {skin_path}.zip")
-        
-        subprocess.run([f'.\\utils\\zip2rmskin\\zip2rmskin.exe', f'.\\{skin_path}.zip'])
-        shutil.move(f'.\{skin_path}.zip', f'.\\skins\\{gif_without_extension}.rmskin')
     else:
         print(f"{file} is not a .gif file. Skipping...\n")
         continue
